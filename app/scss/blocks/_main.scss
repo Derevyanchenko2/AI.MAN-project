@@ -1,0 +1,93 @@
+.main {
+    padding-top: 112px;
+    padding-bottom: 100px;
+    position: relative;
+}
+.handle-image{
+    left: 0;
+    position: absolute;
+    top: 72%;
+    width: 80%;
+    z-index: -1;
+}
+.art-ai{
+    position: absolute;
+    top: 65%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    max-width: 459px;
+    width: 100%;
+    z-index: -1;
+}
+.main-title {
+    background: linear-gradient(90deg, #FFF 0.01%, rgba(255, 255, 255, 0.30) 49.48%, #FFF 99.99%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Raleway;
+    font-size: 105px;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: .5px;
+    line-height: 141px;
+    text-align: center;
+    span{
+        background: linear-gradient(308deg, #A7F306 2.04%, #F3CD06 98.59%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+.main-boxs__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 64px;
+}
+.main-box__left {
+    max-width: 460px;
+    width: 100%;
+    display: flex;
+}
+.main-box {
+    padding: 30px;
+    border: 1px solid rgba(128, 128, 128, 0.192);;
+    border-radius: 32px;
+    h3{
+        color: #FFF;
+        font-family: Plus Jakarta Display;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+    }
+    p{
+        color: #FFF;
+        font-family: Plus Jakarta Sans;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 200%;
+        opacity: 0.5;
+    }
+}
+.main-box__left--technology {
+    margin-left: 27px;
+}
+.main-box__right {
+    p{
+        max-width: 373px;
+        opacity: 0.5;
+        margin-bottom: 48px;
+    }
+}
+.started-btn{
+    background-color: #fff;
+    border: none;
+    color: #1a1a1a;
+    &:hover{
+        color:#fff;
+        background: #cff306;
+    }
+}

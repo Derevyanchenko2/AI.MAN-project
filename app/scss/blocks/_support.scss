@@ -1,0 +1,36 @@
+.support {
+    padding:100px 0;
+}
+.support-heading {
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.support-navigation {
+    display: flex;
+    align-items: center;
+}
+.prev-btn {
+}
+.next-btn {
+}
+.swiper-row {
+    max-width: 1440px;
+    margin-left: auto;
+}
+.swiper-slide__image{
+    margin-bottom: 36px;
+    max-width: 320px;
+    width: 100%;
+} 
+.slide-description {
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%; 
+    max-width: 265px;
+    width: 100%;
+}

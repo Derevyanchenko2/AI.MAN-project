@@ -1,0 +1,102 @@
+.technologies {
+    padding-top: 179px;
+    padding-bottom: 80px;
+}
+.technologies-heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 90px;
+}
+.technologies-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .technology-tabs {
+        display: flex;
+        align-items: center;
+        li:not(:last-child){
+            margin-right: 120px;
+        }
+        li{
+            a {
+                color: #FFF;
+                text-align: center;
+                font-family: Plus Jakarta Sans;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 200%; 
+                opacity: 0.5;
+                transition:0.4s;
+                &.active {
+                    color: #FFF;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .technology-tab {
+        padding-top: 160px;
+        transition: opacity 0.5s ease-in-out;
+    }
+    .technology-tab.active {
+        display: block;
+        opacity: 1;
+    }
+    .technology-tab__wrapper{
+        display: flex;
+        align-items: center;
+    }
+    .technology-info__title {
+        margin-bottom: 30px;
+        span{
+            background: linear-gradient(308deg, #A7F306 2.04%, #F3CD06 98.59%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    .technology-info__text{
+        margin-bottom: 36px;
+    }
+    .technology-list {
+        margin-bottom: 48px;
+    }
+    .technology-list__item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+    .technology-list__item:not(:last-child){
+        margin-bottom: 20px;
+    }
+    .technology-list__item-img {
+        border-radius: 30px;
+        background: rgba(255, 255, 255, 0.08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+    }
+    .technology-list__item-text {
+        color: #FFF;
+        font-family: Plus Jakarta Sans;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 200%;
+    }
+    .technology-btn {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        color: #FFF;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        max-width: 253px;
+        width: 100%;
+    }
+}
