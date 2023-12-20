@@ -45,8 +45,8 @@
             @media(max-width:992px){
                 margin-right: 48px;
             }
-            @media(max-width:992px){
-                margin-right: 48px;
+            @media(max-width:768px){
+                margin-right: 30px;
             }
         }
         li{
@@ -76,12 +76,21 @@
         @media(max-width:992px){
             font-size: 25px;
         }
+        @media(max-width:768px){
+            font-size: 18px;
+        }
+        @media(max-width:450px){
+            font-size: 16px;
+        }
         &.active {
             color: #FFF;
             opacity: 1;
             &::after {
                 opacity: 1;
                 height: 4px;
+                @media(max-width:768px){
+                    height: 2px;
+                }
             }
         }
     
@@ -166,6 +175,13 @@
         justify-content: center;
         width: 32px;
         height: 32px;
+        @media(max-width:768px){
+            width: 24px;
+            height: 24px;
+            img{
+                width: 11px;
+            }
+        }
     }
     .technology-list__item-text {
         color: #FFF;
@@ -174,6 +190,12 @@
         font-style: normal;
         font-weight: 400;
         line-height: 200%;
+        @media(max-width:992px){
+            font-size: 18px;
+        }
+        @media(max-width:768px){
+            font-size: 16px;
+        }
     }
     .technology-btn {
         display: flex;
@@ -184,7 +206,11 @@
         max-width: 253px;
         width: 100%;
         transition: color 0.5s all, border-color 0.5s all;
-                
+        @media(max-width:768px){
+            gap: 15px;
+            max-width: 217px;
+            width: 100%;
+        }
         &:hover svg path {
             transition: all .3s;    
             stroke: #1a1a1a;

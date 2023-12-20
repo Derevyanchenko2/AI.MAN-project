@@ -186,7 +186,13 @@
         margin-left: 15px;
     }
 }
-
+.main-box__right{
+    @media (max-width:768px) {
+        margin: 0 auto;
+        max-width: 340px;
+    }
+ 
+}
 .main-box__right p {
     max-width: 373px;
     opacity: 0.5;
