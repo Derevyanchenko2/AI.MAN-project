@@ -1,5 +1,12 @@
 .header {
-    padding-top: 48px;
+    padding: 35px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1001;
+    border-bottom: 1px solid rgba(217, 217, 217, 0.2);
+    background: #1A1A1A;
 }
 .header-wrapper {
     display: flex;
