@@ -1,24 +1,69 @@
 .main {
-    padding-top: 112px;
-    padding-bottom: 100px;
+    padding: 115px 0 100px;
     position: relative;
 }
-.handle-image{
+
+.handle-image {
+    position: absolute;
+    top: 75%;
     left: 0;
-    position: absolute;
-    top: 72%;
-    width: 80%;
+    width: 81%;
     z-index: -1;
+
+    @media (max-width:1300px) {
+        width: 82%;
+    }
+
+    @media (max-width:1200px) {
+        top: 78%;
+        width: 90%;
+    }
+
+    @media (max-width:992px) {
+        top: 32%;
+    }
+
+    @media (max-width:768px) {
+        display: none;
+    }
 }
-.art-ai{
+
+.art-ai {
     position: absolute;
-    top: 65%;
-    left: 47%;
+    top: 68%;
+    left: 46%;
     transform: translate(-50%, -50%);
     max-width: 459px;
     width: 100%;
     z-index: -1;
+
+    @media (max-width:1300px) {
+        top: 65%;
+        left: 47%;
+        max-width: 395px;
+    }
+
+    @media (max-width:1200px) {
+        top: 70%;
+        left: 53%;
+        max-width: 336px;
+    }
+
+    @media (max-width:992px) {
+        top: 27%;
+        left: 50%;
+        max-width: 295px;
+    }
+
+    @media (max-width:768px) {
+        top: 33%;
+    }
+
+    @media (max-width:460px) {
+        top: 40%;
+    }
 }
+
 .main-title {
     background: linear-gradient(90deg, #FFF 0.01%, rgba(255, 255, 255, 0.30) 49.48%, #FFF 99.99%);
     background-clip: text;
@@ -30,29 +75,78 @@
     letter-spacing: .5px;
     line-height: 141px;
     text-align: center;
-    span{
+
+    @media (max-width:1200px) {
+        font-size: 88px;
+    }
+
+    @media (max-width:992px) {
+        font-size: 60px;
+        line-height: 75px;
+    }
+
+    @media (max-width:768px) {
+        font-size: 45px;
+        line-height: 56px;
+    }
+
+    span {
         background: linear-gradient(308deg, #A7F306 2.04%, #F3CD06 98.59%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 }
+
 .main-boxs__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-top: 64px;
+
+    @media (max-width:1200px) {
+        padding-top: 30px;
+    }
+
+    @media (max-width:992px) {
+        flex-wrap: wrap;
+        padding-top: 400px;
+        justify-content: center;
+    }
+
+    @media (max-width:768px) {
+        padding-top: 255px;
+    }
 }
+
 .main-box__left {
     max-width: 460px;
     width: 100%;
-    display: flex;
+    display: flex;  
+    @media (max-width:1200px) {
+        max-width: none;
+    }
+
+    @media (max-width:992px) {
+        justify-content: center;
+        margin-bottom: 30px;
+    }
 }
+
 .main-box {
     padding: 30px;
-    border: 1px solid rgba(128, 128, 128, 0.192);;
+    border: 1px solid rgba(128, 128, 128, 0.192);
     border-radius: 32px;
-    h3{
+
+    @media (max-width:1200px) {
+        padding: 22px;
+    }
+    
+    @media (max-width:768px) {
+        padding: 15px;
+    }
+
+    h3 {
         color: #FFF;
         font-family: Plus Jakarta Display;
         font-size: 40px;
@@ -62,7 +156,8 @@
         letter-spacing: 1.5px;
         text-transform: uppercase;
     }
-    p{
+
+    p {
         color: #FFF;
         font-family: Plus Jakarta Sans;
         font-size: 18px;
@@ -70,24 +165,37 @@
         font-weight: 500;
         line-height: 200%;
         opacity: 0.5;
+        @media(max-width:768px){
+            font-size: 16px;
+        }
+        @media(max-width:460px){
+            font-size: 13px;
+        }
     }
 }
+
 .main-box__left--technology {
     margin-left: 27px;
-}
-.main-box__right {
-    p{
-        max-width: 373px;
-        opacity: 0.5;
-        margin-bottom: 48px;
+    border-right: none;
+
+    @media (max-width:1200px) {
+        margin-left: 25px;
+    }
+
+    @media (max-width:768px) {
+        margin-left: 15px;
     }
 }
-.started-btn{
+
+.main-box__right p {
+    max-width: 373px;
+    opacity: 0.5;
+    margin-bottom: 48px;
+}
+
+.started-btn {
     background-color: #fff;
     border: none;
     color: #1a1a1a;
-    &:hover{
-        color:#fff;
-        background: #cff306;
-    }
+    transition: 0.4s;
 }

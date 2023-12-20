@@ -1,3 +1,4 @@
+
 // burger-menu
 document.querySelector(".open-menu-js").addEventListener("click", function() {
   var mobileMenuOverlay = document.querySelector(".mobileMenu-overlay");
@@ -5,6 +6,25 @@ document.querySelector(".open-menu-js").addEventListener("click", function() {
   document.body.style.overflowX = "hidden";
 });
 
+document.querySelector(".mobileMenu-close").addEventListener("click", function() {
+  var mobileMenuOverlay = document.querySelector(".mobileMenu-overlay");
+  mobileMenuOverlay.classList.remove("open");
+  document.body.style.overflowX = "auto";
+});
+
+// Получаем все ссылки внутри бургер-меню
+const mobileMenuLinks = document.querySelectorAll('.mobileMenu-link');
+
+// Добавляем обработчик события для каждой ссылки
+mobileMenuLinks.forEach(link => {
+  link.addEventListener('click', function() {
+    // Закрываем бургер-меню
+    document.querySelector(".mobileMenu-overlay").classList.remove("open");
+    document.body.style.overflowX = "auto";
+  });
+});
+
+// Также добавляем обработчик для кнопки закрытия
 document.querySelector(".mobileMenu-close").addEventListener("click", function() {
   var mobileMenuOverlay = document.querySelector(".mobileMenu-overlay");
   mobileMenuOverlay.classList.remove("open");
@@ -41,14 +61,68 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 // slider
 document.addEventListener('DOMContentLoaded', function () {
-  const swiper = new Swiper('.swiper', {
+  const swiper = new Swiper('.support-swiper', {
     slidesPerView: 4.5,
     spaceBetween: 0,
+    navigation: {
+      nextEl: '.support-next-btn',
+      prevEl: '.support-prev-btn',
+    },
+    breakpoints: {
+      // when window width is <= 576px
+      320: {
+        slidesPerView: 1,
+      },
+      576: {
+        slidesPerView: 2,
+      },
+      // when window width is <= 768px
+      768: {
+        slidesPerView: 2.5,
+      },
+      // when window width is <= 992px
+      992: {
+        slidesPerView: 3,
+      },
+      // when window width is <= 1200px
+      1200: {
+        slidesPerView: 4,
+      },
+      1250: {
+        slidesPerView: 4.5,
+      },
+    },
+  });
+});
+
+// slider 2
+document.addEventListener("DOMContentLoaded", function () {
+  var swiper = new Swiper(".say-swiper", {
+      slidesPerView: 1,
+      spaceBetween: 0,
       navigation: {
-          nextEl: '.next-btn',
-          prevEl: '.prev-btn',
+          nextEl: ".say-next-btn",
+          prevEl: ".say-prev-btn",
       },
   });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  const scrollLinks = document.querySelectorAll('.scroll-link');
 
+  scrollLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+});

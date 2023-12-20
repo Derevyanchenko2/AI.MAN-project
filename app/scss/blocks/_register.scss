@@ -3,14 +3,16 @@
     width: 100%;
     background: linear-gradient(307.72deg, #a7f306 2.04%, #f3cd06 98.59%);
     overflow: hidden;
+    @media(max-width:768px){
+        padding: 20px 0;
+    }
 }
 
 .register-sliders {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    animation: slide 9s alternate-reverse infinite;
+    animation: slide 8s linear infinite;
 }
+
 .register-slide {
     flex: 0 0 auto;
     display: flex;
@@ -24,18 +26,32 @@
         font-weight: 700;
         line-height: 200%;
         letter-spacing: 1.44px;
+        @media(max-width:1200px){
+            font-size: 26px;
+        }
+        @media(max-width:768px){
+            font-size: 18px;
+        }
     }
 
     &:last-child {
         margin-right: 0;
     }
+    @media(max-width:768px){
+        gap: 15px;
+        img{
+            width: 40px;
+            height: 40px;
+        }
+    }
+    
 }
 
 @keyframes slide {
     to {
-        transform: translateX(-20%);
+        transform: translateX(-33.333%);
     }
     from {
-        transform: translateX(60%);
+        transform: translateX(0);
     }
 }

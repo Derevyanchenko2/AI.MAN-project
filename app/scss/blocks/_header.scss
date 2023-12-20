@@ -22,7 +22,7 @@
         font-weight: 500;
         line-height: normal;
         &:hover{
-            transition: 0.4s;
+            transition: all .3s;
             color: #cff306;
             opacity: 1;
         }
@@ -41,11 +41,12 @@
         font-style: normal;
         font-weight: 500;
         line-height: normal;
-        &:hover{
-            transition: 0.4s;
-            color: #cff306;
-            opacity: 1;
-        }
+        transition: 0.4s;
+        // &:hover{
+        //     transition: 2s;
+        //     color: #cff306;
+        //     opacity: 1;
+        // }
     }
 }
 // burger
@@ -61,7 +62,7 @@
     z-index: 1001;
     overflow-y: auto;
     background: #000;
-	transition: all 0.3s;
+	transition: all .3s;
 	position: relative;
 
 	&-close {
@@ -73,7 +74,7 @@
         border: none;
         font-size: 40px;
         // color: $black;
-		transition: all 0.3s;
+		transition: all .3s;
 		&:hover {
 			opacity: 0.5;
 		}
@@ -99,7 +100,7 @@
 		height: 100%;
         background: rgba(0, 0, 0, 0.8);
 		z-index: -1;
-		transition: all 0.3s;
+		transition: all .3s;
 	}
 
 	&-container {
@@ -135,7 +136,7 @@
 	.mobileMenu {
         margin-left: auto;
 		width: 320px;
-		transition: all 0.3s;
+		transition: all .3s;
 	}
 }
 

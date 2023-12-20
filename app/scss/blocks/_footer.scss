@@ -1,14 +1,29 @@
 .footer {
     padding-top: 90px;
     padding-bottom: 70px;
+    @media(max-width: 768px){
+        padding: 75px 0;
+    }
 }
 .footer-wrapper {
     display: flex;
+    @media(max-width: 992px){
+        flex-wrap: wrap;
+    }
 }
 .footer-content {
     margin-right: 130px;
     max-width: 329px;
     width: 100%;
+    @media(max-width:1200px){
+        margin-right: 30px;
+    }
+    @media(max-width:992px){
+        margin-bottom: 45px;
+    }
+    @media(max-width:768px){
+        margin-bottom: 35px;
+    }
 }
 .footer-text {
     padding-top: 28px;
@@ -16,11 +31,28 @@
 .footer-menu {
     padding-bottom: 52px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08); 
+
+    @media(max-width:1200px){
+        padding-bottom: 30px;
+    }
+
   ul{
     display: flex;
     align-items: center;
+    @media(max-width:768px){
+       flex-wrap: wrap;
+        max-width: 30%;
+    }
+
     li:not(:last-child){
         margin-right: 54px;
+        @media(max-width:1200px){
+            margin-right: 25px;
+        }
+        @media(max-width:768px){
+           margin-right: 0;
+           margin-bottom: 15px;
+        }
     }
         a{
             color: #FFF;
@@ -30,10 +62,18 @@
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+
             &:hover{
-                transition: 0.4s;
+                transition: all .3s;
                 color: #cff306;
                 opacity: 1;
+            }
+
+            @media(max-width:1200px){
+                font-size: 20px;
+            }
+            @media(max-width:768px){
+                font-size: 16px;
             }
     }
   }
@@ -44,6 +84,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media(max-width:1200px){
+        padding-top: 30px;
+    }
+
+    @media(max-width:768px){
+        flex-wrap: wrap;
+        p:not(:last-child){
+            margin-bottom: 15px;
+        }
+    }
+
     p{
         color: #FFF;
         font-family: Plus Jakarta Sans;
