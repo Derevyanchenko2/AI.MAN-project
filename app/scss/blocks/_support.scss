@@ -23,18 +23,15 @@
     display: flex;
     align-items: center;
 }
-.prev-btn {
-}
-.next-btn {
-}
 .swiper-row {
     max-width: 1440px;
     margin-left: auto;
 }
 .swiper-slide__image{
     margin-bottom: 36px;
-    max-width: 320px;
-    width: 100%;
+    @media(max-width:768px){
+        margin-bottom: 15px;
+    }
 
 } 
 .slide-description {
@@ -48,5 +45,16 @@
     width: 100%;
     @media(max-width:768px){
         font-size: 20px;
+    }
+}
+.support-navigation--mob{
+    display: none;
+    @media(max-width:768px){
+        display: flex;
+    }
+}
+.support-navigation--pc{
+    @media(max-width:768px){
+        display: none;
     }
 }
