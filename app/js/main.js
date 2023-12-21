@@ -97,15 +97,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // slider 2
 document.addEventListener("DOMContentLoaded", function () {
-  var swiper = new Swiper(".say-swiper", {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      navigation: {
-          nextEl: ".say-next-btn",
-          prevEl: ".say-prev-btn",
-      },
-  });
+  var isMobile = window.innerWidth <= 768;
+
+  var swiperOptions = {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    navigation: {
+      nextEl: ".say-next-btn",
+      prevEl: ".say-prev-btn",
+    },
+  };
+  if (isMobile) {
+    swiperOptions.autoplay = {
+      delay: 3000, // автоматически свайпать каждые 2 секунды
+      disableOnInteraction: false,
+    };
+  }
+  var swiper = new Swiper(".say-swiper", swiperOptions);
 });
+
 
 document.addEventListener("DOMContentLoaded", function() {
   const scrollLinks = document.querySelectorAll('.scroll-link');
