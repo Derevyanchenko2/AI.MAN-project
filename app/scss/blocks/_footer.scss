@@ -90,9 +90,11 @@
     }
 
     @media(max-width:768px){
-        flex-wrap: wrap;
+        padding-top: 30px;
+        display: block;
         p:not(:last-child){
             margin-bottom: 15px;
+            text-align: left;
         }
     }
 
