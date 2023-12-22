@@ -116,7 +116,6 @@ document.addEventListener("DOMContentLoaded", function () {
   var swiper = new Swiper(".say-swiper", swiperOptions);
 });
 
-
 document.addEventListener("DOMContentLoaded", function() {
   const scrollLinks = document.querySelectorAll('.scroll-link');
 
@@ -128,9 +127,12 @@ document.addEventListener("DOMContentLoaded", function() {
       const targetElement = document.getElementById(targetId);
 
       if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
+        const offset = document.querySelector('.header').offsetHeight; // Замени '.header' на класс или идентификатор твоего фиксированного хедера
+        const targetPosition = targetElement.offsetTop - offset;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
         });
       }
     });
